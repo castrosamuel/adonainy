@@ -7,7 +7,7 @@ document.body.appendChild(div);
 
 var dy = 5;
 var hr = 19;
-var mn = 26;
+var mn = 54;
 var offAir = 2000;
 let annoucement_div = document.createElement("div");
 annoucement_div.className = "sp-announcement-banner";
