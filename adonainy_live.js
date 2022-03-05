@@ -6,9 +6,9 @@ document.body.appendChild(div);
 
 
 var dy = 5;
-var hr = 19;
-var mn = 56;
-var offAir = 2000;
+var hr = 20;
+var mn = 26;
+var offAir = 2027;
 let annoucement_div = document.createElement("div");
 annoucement_div.className = "sp-announcement-banner";
 annoucement_div.style.backgroundColor= "rgb(32,33,36)";
@@ -19,6 +19,11 @@ anc_content.style.fontFamily = "Open Sans, Arial, Helvetica, sans-serif";
 anc_content.style.fontSize = "16px";
 anc_content.style.color = "white";
 lbi = setInterval(liveStart, 1000);
+
+function minTwoDigits(min) {
+	return (min < 10 ? '0' : '')+min
+}
+
 function messegeDiv(msg) {
 	if (document.getElementsByClassName("sp-announcement-banner").length === 0){
 	anc_content.innerHTML = msg;
@@ -29,7 +34,7 @@ function messegeDiv(msg) {
 	}
 }
 function liveStart() {
-	if(new Date().getDay() === dy && parseInt(`${new Date().getHours()}${new Date().getMinutes()}`) < offAir){
+	if(new Date().getDay() === dy && parseInt(`${new Date().getHours()}${minTwoDigits(new Date().getMinutes())}`) < offAir){
 	// Messege going live here...
 	messegeDiv('En vivo a las 10am por <a href="http://www.avivamehd.tv">AvivameHD.tv<\/a>');
 	clearInterval(lbi);
@@ -37,7 +42,7 @@ function liveStart() {
 	}
 }
 function liveNow() {
-	if(parseInt(`${new Date().getHours()}${new Date().getMinutes()}`) >= parseInt(`${hr}${mn}`)){
+	if(parseInt(`${new Date().getHours()}${minTwoDigits(new Date().getMinutes())}`) >= parseInt(`${hr}${mn}`)){
 	// messege live now here...
 	messegeDiv('<span style="color:red">●<\/span> Ahora en vivo por <a href="http://www.avivamehd.tv">AvivameHD.tv<\/a>');
 	clearInterval(lni);
@@ -45,7 +50,7 @@ function liveNow() {
 	}
 }
 function liveEnd() {
-	if(parseInt(`${new Date().getHours()}${new Date().getMinutes()}`) > offAir){
+	if(parseInt(`${new Date().getHours()}${minTwoDigits(new Date().getMinutes())}`) > offAir){
 	// remove messege here...
 	annoucement_div.remove();
 	clearInterval(lei);
