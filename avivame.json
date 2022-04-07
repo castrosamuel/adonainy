@@ -1,9 +1,9 @@
 {	"link":"http://www.avivamehd.tv/testpage",
 	"contents":[
-  		{'date': 20220313, 
-		 'link': 'http://www.avivamehd.tv/20220313', 
-		 'name': 'Apostól Frank Almonte', 
-		 'title': 'Escenario Profetico 2022 Parte 2', 
-		 'thumb': 'https://storage.snappages.site/47G5NM/assets/images/7161110_1920x1080_500.jpg', 
-		 'youtube': 'https://www.youtube.com/embed/W2Rjr3Sc2r4?rel=0'}
+  		{"date": 20220313, 
+		 "link": "http://www.avivamehd.tv/20220313", 
+		 "name": "Apostól Frank Almonte", 
+		 "title": "Escenario Profetico 2022 Parte 2", 
+		 "thumb": "https://storage.snappages.site/47G5NM/assets/images/7161110_1920x1080_500.jpg", 
+		 "youtube": "https://www.youtube.com/embed/W2Rjr3Sc2r4?rel=0"}
 ]}
